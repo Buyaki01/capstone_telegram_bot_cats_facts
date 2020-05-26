@@ -1,3 +1,5 @@
+# rubocop:disable Layout/LineLength
+
 require 'telegram/bot'
 require_relative 'cats_facts.rb'
 
@@ -14,7 +16,7 @@ class Bot
         when '/cats'
           values = Cats.new
           value = values.select_random
-          bot.api.send_message(chat_id: message.chat.id, text: "#{value['text']}", date: message.date)
+          bot.api.send_message(chat_id: message.chat.id, text: (value['text']).to_s, date: message.date)
         else
           bot.api.send_message(chat_id: message.chat.id, text: "Invalid entry, #{message.from.first_name}, you need to use  /start,  /stop or /cats")
         end
@@ -22,3 +24,4 @@ class Bot
     end
   end
 end
+# rubocop:enable Layout/LineLength
