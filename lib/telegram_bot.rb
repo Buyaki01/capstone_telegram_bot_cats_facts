@@ -14,11 +14,11 @@ class Bot
         when '/stop'
           bot.api.send_message(chat_id: message.chat.id, text: "Bye, #{message.from.first_name}")
         when '/cats'
-          values = Cats.new
-          value = values.select_random
-          bot.api.send_message(chat_id: message.chat.id, text: (value['text']).to_s, date: message.date)
+          cats = Cats.new
+          cat_fact = cats.random_fact_about_cats
+          bot.api.send_message(chat_id: message.chat.id, text: (cat_fact['text']).to_s, date: message.date)
         else
-          bot.api.send_message(chat_id: message.chat.id, text: "Invalid entry, #{message.from.first_name}, you need to use  /start,  /stop or /cats")
+          bot.api.send_message(chat_id: message.chat.id, text: "#{message.from.first_name}, you need to use  /start,  /stop or /cats")
         end
       end
     end
