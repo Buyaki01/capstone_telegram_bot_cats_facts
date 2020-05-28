@@ -16,7 +16,7 @@ In this project, am creating a telegram bot with the name @wahenga, where each t
 - Obtain a token number from Telegram with the help of the bot father. Follow the istructions given by the bot father.
 - After creating our bot and obtaining the token number,we will need some gems to interact with the bot API and we will be using telegram-bot-ruby which we can directly install from our terminal by running **gem install telegram-bot-ruby** on your termial. 
 - Another way to install our telegram-bot-ruby is to initialize a Ruby Gemfile by running bundle init and then add **gem 'telegram-bot-ruby'** in our Gemfile.
-- Apart from **telegram-bot-ruby** we will also need other gems like; gem  'json' and gem 'net-http-persistent', '~> 2.9', '>= 2.9.4'
+- Apart from **telegram-bot-ruby** we will also need other gems like; **gem  'json'** and **gem 'net-http-persistent', '~> 2.9', '>= 2.9.4'**
 - Run bundle install to install the dependencies
 - Create main.rb in the bin folder and import our gem **require 'telegram/bot'**
 - Create a class called Bot inside telegram_bot.rb in the lib folder which should contain the Ruby wrapper for Telegram's Bot API
