@@ -4,10 +4,15 @@ require 'json'
 require_relative 'telegram_bot.rb'
 
 class Cats
-  attr_accessor :cat_facts
   def initialize
     @cat_facts = make_request_to_api_endpoint
   end
+
+  def fact
+    random_fact_about_cats
+  end
+
+  private
 
   def make_request_to_api_endpoint
     endpoint_url = 'https://cat-fact.herokuapp.com/facts'
