@@ -10,7 +10,7 @@ class TeleBot
       bot.listen do |message|
         case message.text
         when '/start'
-          bot.api.send_message(chat_id: message.chat.id, text: "Hello, #{message.from.first_name}, welcome to wahengabot. To start enter /start, to get a fact about cats, enter /cats and to end, enter /end")
+          bot.api.send_message(chat_id: message.chat.id, text: "Hello, #{message.from.first_name}, welcome to wahengabot. To start enter /start, to get a fact about cats, enter /cats and to stop, enter /stop")
         when '/stop'
           bot.api.send_message(chat_id: message.chat.id, text: "Bye, #{message.from.first_name}, hope you have learnt a lot about cats")
         when '/cats'
