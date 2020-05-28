@@ -4,8 +4,7 @@ require 'json'
 require_relative 'telegram_bot.rb'
 
 class Cats
-  @cat_facts = nil
-
+  attr_accessor :cat_facts
   def initialize
     @cat_facts = make_request_to_api_endpoint
   end
