@@ -10,19 +10,20 @@ In this project, am creating a telegram bot with the name @wahenga, where each t
 - Telegram Bot API
 #### and deployed to Github
 
+## Installation
+- Ensure you have a Telegram account, Ruby and RSpec installed
+
 ## Getting Started
-- Create a telegram account
-- Install Ruby. If you don't know how to install Ruby, you can read this [documentation](https://www.ruby-lang.org/en/documentation/installation/?ref=hackernoon.com)
-- Obtain a token number from Telegram with the help of the bot father. Follow the istructions given by the bot father.
-- After creating our bot and obtaining the token number,we will need some gems to interact with the bot API and we will be using telegram-bot-ruby which we can directly install from our terminal by running **gem install telegram-bot-ruby** on your termial. 
-- Another way to install our telegram-bot-ruby is to initialize a Ruby Gemfile by running bundle init and then add **gem 'telegram-bot-ruby'** in our Gemfile.
-- Apart from **telegram-bot-ruby** we will also need other gems like; **gem  'json'** and **gem 'net-http-persistent', '~> 2.9', '>= 2.9.4'**
-- Run bundle install to install the dependencies
-- Create main.rb in the bin folder and import our gem **require 'telegram/bot'**
-- Create a class called Bot inside telegram_bot.rb in the lib folder which should contain the Ruby wrapper for Telegram's Bot API
-- Create a class called Cats inside cats_facts.rb in the lib folder which is responsible for making requests to the API Endpoint
-- Initialize our bot by running ruby bin/main.rb on your terminal
-- Search for @wahenga(our bot)in your telegram account and type in /cats as shown below:
+* git clone https://github.com/Buyaki01/capstone_telegram_bot_cats_facts.git 
+* Run **gem install telegram-bot-ruby**
+* Run **bundle install** -> to install the dependencies
+* Run bin/main.rb -> to run the program
+* Run **gem install rspec** -> to install rspec
+* Run **rspec** -> to test the program with rspec
+
+## How to interact with the bot on telegram
+- Run the program on the editor: ruby bin/main.rb
+- Search for the bot **@wahenga** on your telegram account and then type /start on the chat field to start the bot, type /cats to get random information about cats and type /stop to end the bot as shown below:
 
 ![screenshot](screenshot.png)
 

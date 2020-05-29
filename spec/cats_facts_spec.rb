@@ -1,10 +1,11 @@
 require_relative '../lib/cats_facts.rb'
 
 RSpec.describe Cats do
-  describe '#make_request_to_api_endpoint' do
-    let(:cats) { Cats.new }
-    let(:make_json_request) { cats.make_request_to_api_endpoint }
+  let(:cats) { Cats.new }
+  let(:make_json_request) { cats.send(:make_request_to_api_endpoint) }
+  let(:call_method) { cats.send(:random_fact_about_cats) }
 
+  describe '#make_request_to_api_endpoint' do
     it 'when the request is sucessful should return Json response' do
       expect(make_json_request.class).to eql(Array)
     end
@@ -15,9 +16,6 @@ RSpec.describe Cats do
   end
 
   describe '#random_fact_about_cats' do
-    let(:cats) { Cats.new }
-    let(:call_method) { cats.random_fact_about_cats }
-
     it 'return a Hash' do
       expect(call_method.class).to eql(Hash)
     end
