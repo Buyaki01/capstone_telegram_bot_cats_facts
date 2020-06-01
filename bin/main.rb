@@ -1,5 +1,9 @@
 require_relative '../lib/telegram_bot.rb'
 require_relative '../lib/cats_facts.rb'
 
-puts 'Hello, want to know more about cats? Tag along with me to find fascinating facts about cats'
-Bot.new
+puts 'Welcome, to wahengabot where you will learn fascinating facts about cats'
+puts ''
+puts 'Enjoy!'
+puts ''
+puts 'Use ctrl-c to stop the bot on your terminal'
+TeleBot.new

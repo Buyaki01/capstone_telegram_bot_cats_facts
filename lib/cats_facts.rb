@@ -4,22 +4,26 @@ require 'json'
 require_relative 'telegram_bot.rb'
 
 class Cats
-  @values = nil
-
   def initialize
-    @values = make_request_to_api_endpoint
+    @cat_facts = make_request_to_api_endpoint
   end
+
+  def fact
+    random_fact_about_cats
+  end
+
+  private
 
   def make_request_to_api_endpoint
-    url = 'https://cat-fact.herokuapp.com/facts'
-    uri = URI(url)
-    response = Net::HTTP.get(uri)
-    response = JSON.parse(response)
-    response['all']
+    endpoint_url = 'https://cat-fact.herokuapp.com/facts'
+    uri = URI(endpoint_url)
+    endpoint_response = Net::HTTP.get(uri)
+    endpoint_response = JSON.parse(endpoint_response)
+    endpoint_response['all']
   end
 
-  def select_random
-    @values = @values.sample
-    @values
+  def random_fact_about_cats
+    @cat_facts = @cat_facts.sample
+    @cat_facts
   end
 end
